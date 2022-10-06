@@ -1,0 +1,21 @@
+import Image01 from './Bands/acdc.jpg';
+import Image02 from './Bands/aerosmith.svg';
+import Image03 from './Bands/blacksabbath.jpg';
+import Image04 from './Bands/bmth.jpg';
+import Image05 from './Bands/deeppurple.jpg';
+import Image06 from './Bands/greenday.jpg';
+import Image07 from './Bands/imaginedragons.jpg';
+import Image08 from './Bands/metallica.jpg';
+import Image09 from './Bands/nkoha.jpg';
+import Image10 from './Bands/pantera.jpg';
+import Image11 from './Bands/pentakill.jpg';
+import Image12 from './Bands/radiohead.jpg';
+import Image13 from './Bands/rolling.jpeg';
+import Image14 from './Bands/scorpions.jpg';
+import Image15 from './Bands/slaye.jpg';
+import Image16 from './Bands/slipknot.jpg';
+import Image17 from './Bands/soad.jpg';
+import Image18 from './Bands/tfk.jpg';
+
+const Images = [Image01, Image02, Image03, Image04, Image05, Image06, Image07, Image08, Image09, Image10, Image11, Image12, Image13, Image14, Image15, Image16, Image17, Image18];
+export default Images;
