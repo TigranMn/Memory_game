@@ -18,6 +18,12 @@ function App() {
     }
   }, [activeCards]);
 
+  function reset() {
+    setClicks(0)
+    setFoundPairs([])
+    setActiveCards([])
+    setWon(false)
+  }
   function generateCards(len) {
     const BANDS = [];
     for (let i = 0; i < len; i++) {
@@ -29,31 +35,25 @@ function App() {
     if (gridSize == "6 x 6") {
       setGridSize("4 x 4");
       setCards(generateCards(8));
-      setClicks(0)
-      setFoundPairs([])
-      setActiveCards([])
+      reset()
     } else {
       setGridSize("6 x 6");
       setCards(generateCards(18));
-      setClicks(0)
-      setFoundPairs([])
-      setActiveCards([])
+      reset()
     }
   }
 
   function flipCard(index) {
     if (won) {
       setCards([...generateCards((+gridSize[0]) ** 2 / 2)]);
-      setFoundPairs([]);
-      setWon(false);
-      setClicks(0);
+      reset()
     }
     if (activeCards.length === 0) {
       setActiveCards([index]);
     }
     if (activeCards.length === 1) {
       const firstIndex = activeCards[0];
-      const secondsIndex = activeCards[index];
+      const secondsIndex = index;
       if (cards[firstIndex] === cards[secondsIndex]) {
         if (foundPairs.length + 2 === cards.length) {
           setWon(true);
