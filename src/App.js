@@ -54,6 +54,11 @@ function App() {
     if (activeCards.length === 1) {
       const firstIndex = activeCards[0];
       const secondsIndex = index;
+      if(firstIndex === secondsIndex)
+      {
+        setActiveCards([])
+        return
+      }
       if (cards[firstIndex] === cards[secondsIndex]) {
         if (foundPairs.length + 2 === cards.length) {
           setWon(true);
